@@ -24,17 +24,17 @@ So this skill takes self-review away:
 
 ```mermaid
 flowchart TD
-    A[Scout: page map + design cache, once per page] --> B[Take the next block, top to bottom]
-    B --> C[Implementer builds the block]
-    C --> D[NEW reviewer compares: properties + geometry + screenshots]
-    D --> E{Lead: evidence bar + compare with previous round}
-    E -- differences found --> F[Implementer fixes, then checks the computed value]
+    A["Scout<br/>page map + design cache<br/>(once per page)"] --> B["Next block<br/>(top to bottom)"]
+    B --> C["Implementer<br/>builds the block"]
+    C --> D["NEW reviewer<br/>properties + geometry<br/>+ screenshots"]
+    D --> E{"Lead<br/>evidence bar +<br/>previous round"}
+    E -- "differences" --> F["Implementer fixes<br/>+ checks computed value"]
     F --> D
-    E -- same finding twice --> G[Diagnostician: why the fix doesn't reach the render]
+    E -- "same finding twice" --> G["Diagnostician<br/>why the fix doesn't<br/>reach the render"]
     G --> D
-    E -- MATCHES --> H{More blocks?}
-    H -- yes --> B
-    H -- no --> I[Final reviewer: whole page at every width]
+    E -- "MATCHES" --> H{"More<br/>blocks?"}
+    H -- "yes" --> B
+    H -- "no" --> I["Final reviewer<br/>whole page, every width"]
 ```
 
 | Role | Does | Never does |
